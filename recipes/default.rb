@@ -49,7 +49,6 @@ template "/usr/sbin/ejabberd_add_to_cluster.erl" do
   mode "700"
   owner "ejabberd"
   group "ejabberd"
-  action :create
 end
 
 if node[:ejabberd_replicate_from]
