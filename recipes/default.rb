@@ -44,7 +44,7 @@ template "/usr/sbin/ejabberd_mnesia_info.erl" do
   group "ejabberd"
 end
 
-template "/usr/sbin/ejabberd_add_to_cluster.erl" do
+template "/usr/sbin/ejabberd_add_to_cluster" do
   source "ejabberd_add_to_cluster.erl.erb"
   mode "700"
   owner "ejabberd"
