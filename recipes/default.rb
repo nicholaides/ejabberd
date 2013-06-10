@@ -37,13 +37,6 @@ template "/etc/ejabberd/ejabberd.cfg" do
   notifies :restart, resources(:service => "ejabberd")
 end
 
-template "/usr/sbin/ejabberd_mnesia_info.erl" do
-  source "ejabberd_mnesia_info.erl.erb"
-  mode "700"
-  owner "ejabberd"
-  group "ejabberd"
-end
-
 template "/usr/sbin/ejabberd_add_to_cluster" do
   source "ejabberd_add_to_cluster.erl.erb"
   mode "700"
