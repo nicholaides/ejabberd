@@ -18,6 +18,14 @@ file "/var/lib/ejabberd/.erlang.cookie" do
   mode "600"
 end
 
+cookbook_file "ejabberd.example.pem" do
+  path "/etc/ejabberd/ejabberd.pem"
+  owner "ejabberd"
+  group "ejabberd"
+  mode "600"
+  action :create
+end
+
 service "ejabberd" do
   start_command "/etc/init.d/ejabberd start"
   stop_command "/etc/init.d/ejabberd stop"
